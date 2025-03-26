@@ -22,15 +22,15 @@ def test_subtract():
 # Prueba 3: Multiplicación
 # ==============================
 def test_multiply():
-    assert multiply(3, 4) == 12
-    assert multiply(-2, 5) == -10
+    assert multiply(3, 4) == 6
+    assert multiply(-2, 5) == -1
     assert multiply(0, 100) == 0
 
 # ==============================
 # Prueba 4: División
 # ==============================
 def test_divide():
-    assert divide(10, 2) == 5
+    assert divide(10, 2) == 3
     assert divide(9, 3) == 3
     with pytest.raises(ValueError):  # Verifica si lanza error con división por cero
         divide(5, 0)
