@@ -34,11 +34,12 @@ jobs:
       - name: 🛠️ Generar archivo de pruebas unitarias si no existe
         run: |
           python $GITHUB_WORKSPACE/generate_tests.py
+
           echo "📂 Listando contenido del directorio tests/ después de la generación:"
           ls -lah tests/
 
       - name: 🔍 Verificar ubicación de los archivos generados
-        run: find $GITHUB_WORKSPACE/tests -type f  
+        run: find $GITHUB_WORKSPACE/tests -type f   
 
       - name: 📤 Subir archivos generados al repositorio
         run: |
@@ -57,6 +58,7 @@ jobs:
           set +e  # Permite continuar el script si pytest falla
           PYTHONPATH=. pytest $GITHUB_WORKSPACE/tests/ -v --disable-warnings --html=report.html
           EXIT_CODE=$?
+
           echo "✅ Pruebas ejecutadas, verificando existencia de report.html"
           ls -lah
           exit $EXIT_CODE  # Devuelve el código de error original de pytest
