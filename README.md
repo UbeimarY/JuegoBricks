@@ -1,6 +1,3 @@
-## Autor  
-👤 Ubeimar Lizardo Yepes Portilla
-
 # 🧪 Pruebas Unitarias con Pytest en JuegoBricks
 
 ## 📦 Instalación de Dependencias
