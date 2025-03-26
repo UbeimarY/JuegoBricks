@@ -1,5 +1,5 @@
 import pytest
-from src.extra_utils import es_palindromo
+from src.palindromo import es_palindromo
 
 def test_es_palindromo():
     assert es_palindromo("Anita lava la tina") is True

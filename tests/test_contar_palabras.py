@@ -1,5 +1,5 @@
 import pytest
-from src.extra_utils import contar_palabras
+from src.contar_palabras import contar_palabras
 
 def test_contar_palabras():
     assert contar_palabras("Hola mundo") == 2
